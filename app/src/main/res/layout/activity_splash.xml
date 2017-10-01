@@ -4,14 +4,29 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@mipmap/luncher_bg"
     tools:context="com.helloword.lgy.mobilesafe.SplashActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_above="@+id/tv_sqlash_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="安全卫士"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/tv_sqlash_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="版本：1.0"
+        android:textSize="22sp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sqlash_version"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
