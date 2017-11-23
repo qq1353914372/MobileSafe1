@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device-admin
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <force-lock />
+        <!-- 清除所有数据（恢复出厂设置） -->
+        <wipe-data />
+        <reset-password />
+        <limit-password />
+        <watch-login />
+    </uses-policies>
+</device-admin>

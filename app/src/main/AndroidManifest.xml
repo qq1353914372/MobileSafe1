@@ -2,9 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.helloword.lgy.mobilesafe">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
 
     <application
+        android:name=".global.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +39,129 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.HOME" />
+
+                <category android:name="android.intent.category.R" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".LostFindActivity" />
+        <activity android:name=".Setup1Activity" />
+        <activity android:name=".Setup2Activity" />
+        <activity android:name=".Setup3Activity" />
+        <activity android:name=".Setup4Activity" />
+
+        <receiver
+            android:name=".receiver.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".SelectContactActivity" />
+
+        <receiver
+            android:name=".receiver.SMSReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provier.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.GPSService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receiver.MyAdmin"
+            android:description="@string/app_name"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/lock_screen" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AToolsActivity" />
+        <activity android:name=".CheckPhoneLocationActivity" />
+
+        <service
+            android:name=".service.PhoneStateListenerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ToastLocationActivity" />
+        <activity android:name=".BlackNumberMainActivity" />
+
+        <service
+            android:name=".service.BlackNumberService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".AppManagerActivity" />
+        <activity android:name=".ProcessActivity" />
+        <activity android:name=".ProcessSettingActivity" />
+
+        <service
+            android:name=".service.LockScreenClearService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".CommonNumberActivity" />
+
+        <receiver android:name=".receiver.MyAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+
+        <service
+            android:name=".service.UpdateWidgetService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receiver.KillProcessReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.KILLPROCESS" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AppLockActivity" />
+
+        <service
+            android:name=".service.WacchDogService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".EnterPwdActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance" />
+        <activity android:name=".KillVirusActivity" />
+        <activity android:name=".CacheClearActivity" />
+        <activity android:name=".TrafficManagerActivity" />
+
+        <service
+            android:name=".TrafficService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_toast_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#accc"
+    tools:context="com.helloword.lgy.mobilesafe.ToastLocationActivity">
+    <Button
+        android:id="@+id/but_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按中提示框拖拽到任意位置"
+        android:visibility="invisible"
+        android:background="@mipmap/l"
+        android:layout_margin="5dp"
+        />
+    <ImageView
+        android:id="@+id/iv_drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:src="@mipmap/drag"
+        />
+    <Button
+        android:id="@+id/but_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按中提示框拖拽到任意位置"
+        android:visibility="visible"
+        android:background="@mipmap/l"
+        android:layout_margin="5dp"
+        />
+
+</RelativeLayout>

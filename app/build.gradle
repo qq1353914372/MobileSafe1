@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
+
     defaultConfig {
         applicationId "com.helloword.lgy.mobilesafe"
         minSdkVersion 16
@@ -28,4 +30,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.0'
     testCompile 'junit:junit:4.12'
+    compile files('libs/afinal_0.5.1_bin.jar')
 }

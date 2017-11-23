@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">手机安全卫士</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>

@@ -29,4 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_sqlash_version"
         android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前下载进度0%"
+        android:id="@+id/tv_sqlash_progress"
+        />
 </RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/iv_appicon"
+        android:background="@mipmap/ic_launcher"
+        android:layout_width="45dp"
+        android:layout_height="45dp" />
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/tv_appname"
+        android:textSize="26sp"
+        android:text="应用名"
+        android:layout_toRightOf="@+id/iv_appicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#757575"
+        android:id="@+id/tv_memory"
+        android:text="占用内存大小"
+        android:layout_below="@+id/tv_appname"
+        android:layout_toRightOf="@+id/iv_appicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_select_process"
+        />
+
+</RelativeLayout>

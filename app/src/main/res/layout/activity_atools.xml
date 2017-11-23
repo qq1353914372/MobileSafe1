@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_atools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.helloword.lgy.mobilesafe.AToolsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8866ff00"
+        android:gravity="center"
+        android:text="高级工具"
+        android:textSize="35sp" />
+
+
+    <TextView
+
+        android:id="@+id/tv_checklocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="归属地查询"
+        android:textColor="#000000"
+        android:textSize="26sp" />
+    <TextView
+        android:id="@+id/tv_smsbackup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="短信备份"
+        android:textColor="#000000"
+        android:textSize="26sp" />
+ <TextView
+        android:id="@+id/tv_commonnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="常用号码查询"
+        android:textColor="#000000"
+        android:textSize="26sp" />
+    <TextView
+        android:id="@+id/tv_applock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="程序锁"
+        android:textColor="#000000"
+        android:textSize="26sp" />
+
+
+
+
+</LinearLayout>
